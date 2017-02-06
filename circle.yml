@@ -1,0 +1,16 @@
+machine:
+  python:
+    version: 2.7
+  services:
+    - docker
+
+test:
+  override:
+    - echo 'All good :-)'
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - pip install git+https://github.com/rackerlabs/lambda-uploader.git
+      - lambda-uploader

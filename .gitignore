@@ -1,0 +1,5 @@
+.idea*
+config.yml
+*pyc
+.coverage
+nosetests.xml

@@ -1,0 +1,14 @@
+{
+  "name": "veles_fallback",
+  "description": "Fallback function for a case when extraction fails",
+  "region": "eu-west-1",
+  "handler": "index.handle",
+  "role": "arn:aws:iam::625416862388:role/lambda_s3_exec_role",
+  "ignore": [
+    ".git",
+    "/*.pyc",
+    ".idea/*"
+  ],
+  "timeout": 300,
+  "memory": 128
+}
