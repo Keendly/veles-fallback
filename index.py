@@ -33,10 +33,14 @@ def _to_extract_result(items):
     articles = []
     for item in items:
         for article in item['articles']:
-            articles.append({
-                'url': article['url'],
-                'text': article['content']
-            })
+            try:
+                articles.append({
+                    'url': article['url'],
+                    'text': article['content']
+                })
+            except Exception, e:
+                print(e)
+                print('Error transforming article: {}', article.get('url'))
     return articles
 
 def _store(articles):
